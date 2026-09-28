@@ -1,7 +1,7 @@
-"""Defines the Contact data model used across the app."""
+Specifies the Contact data model that is used throughout the app.
 
 class Contact:
-    """Represents a single contact with name, age, email, and mobile number."""
+    Represents a single contact with name, age, email and mobile number.
 
     def __init__(self, name, age, email, mobile):
         self.name = name
@@ -10,7 +10,7 @@ class Contact:
         self.mobile = mobile
 
     def to_dict(self):
-        """Convert this contact into a plain dict (for JSON storage)."""
+        """Make this contact a plain dict (for JSON storage)."""
         return {
             'age': self.age,
             'email': self.email,
@@ -19,7 +19,7 @@ class Contact:
 
     @staticmethod
     def from_dict(name, data):
-        """Build a Contact object back from a stored dict."""
+        Create a Contact object based on a stored dict.
         return Contact(
             name=name,
             age=data.get('age'),

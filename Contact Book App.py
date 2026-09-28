@@ -1,22 +1,21 @@
 Contact Book App
-
-A simple command-line Contact Book application built in Python. It lets you create, view, update, delete, search, and count contacts, all stored in memory using a Python dictionary.
+Python implementation of a very simple contact book application using command line. It allows you to make, display, edit, remove, query, and count contacts in memory, all in the form of a Python dictionary.
 
 Features
-Create Contact – Add a new contact with name, age, email, and mobile number.
-View Contact – Look up and display details of a specific contact.
-Update Contact – Edit the age, email, or mobile number of an existing contact.
-Delete Contact – Remove a contact from the contact book.
-Search Contact – Search contacts by partial or full name (case-insensitive).
-Count Contact – Display the total number of saved contacts.
+Create Contact – Add a new contact with name, age, email and mobile number.
+View Contact – Display and view information on a contact.
+Update Contact – Edit contact's age, email or mobile number.
+Delete Contact – Remove contact from the contact book.
+Search Contact – Search for contacts using either a partial or full name (case-insensitive).
+Count Contact – Shows the number of contacts saved.
 Exit – Close the application.
 Requirements
 Python 3.x
-No external libraries required (uses only Python's built-in features)
+No external libraries are needed (only Python built-in features are used)
 How to Run
-Make sure Python 3 is installed on your system.
+Ensure that you have python 3 installed.
 Save the script as contact_book.py.
-Open a terminal in the project folder and run:
+Open terminal window in project folder, and execute:
 bash
    python contact_book.py
 Follow the on-screen menu to manage your contacts.
@@ -30,7 +29,7 @@ Menu Options
 7. Exit
 Data Structure
 
-Contacts are stored in a dictionary where each key is the contact's name and the value is another dictionary holding their details:
+Contacts are kept in a dictionary with keys as contact names, and values as dictionaries of contact information:
 
 python
 contacts = {
@@ -39,20 +38,19 @@ contacts = {
 Project Structure
 contact-book-app/
 │
-├── contact_book.py   # Main application script
+│   └── contact_book.py - main application script
 └── README.md          # Project documentation
 Known Limitations / Notes
-Contacts are stored only in memory — all data is lost when the program exits (no file or database persistence yet).
-The View, Update, and Search options currently reference variables (age, email, mobile) that need to be pulled from the contact dictionary rather than used directly, so these sections may need a small fix before running smoothly.
-Contact names are case-sensitive when used as dictionary keys, though Search is case-insensitive.
+Contacts are not yet persisted in a file or database (only in memory).
+The View, Update and Search are currently using variables that must be retrieved from the contact dictionary as opposed to directly, and so these sections may require some minor tweaking prior to running.
+The names of contacts are not case sensitive for the dictionary but they are case sensitive to use as keys.
 Future Improvements
-Add persistent storage (e.g., save/load contacts to a JSON or CSV file).
-Add input validation (e.g., ensure age is numeric, mobile number format is valid).
-Add an "Update" flow that lets users edit only specific fields instead of re-entering all details.
+Include persistent storage (save / load contacts to a JSON / CSV file).
+Include input validation (e.g. Age must be a number, Mobile number must be a valid format).
+Include an "Update" flow for users to update only specific fields without having to re-input all fields.
 Author
 
 VIT Bhopal – Bioinformatics, Vityarthi Project
 
 License
-
 This project is for academic/educational purposes.
