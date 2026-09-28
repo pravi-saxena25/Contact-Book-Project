@@ -1,4 +1,4 @@
-Specifies the Contact data model that is used throughout the app.
+"""Specifies the Contact data model that is used throughout the app."""
 
 class Contact:
     Represents a single contact with name, age, email and mobile number.
